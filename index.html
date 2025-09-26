@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discover West Africa</title>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome CDN -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="discover.css">
+</head>
+<body class="relative transition-colors duration-300 text-gray-900 dark:text-gray-100 overflow-x-hidden">
+  <!-- Background image -->
+  <div class="fixed inset-0 -z-10 bg-cover bg-center animate-bgzoom" id="bg-img"></div>
+  <!-- Overlay pour lisibilité -->
+  <div class="fixed inset-0 -z-10 bg-black/30 dark:bg-black/60"></div>
+  <!-- Loader animé -->
+  <div id="loader" class="fixed inset-0 flex items-center justify-center bg-sand-50 dark:bg-gray-900 z-50 hidden">
+    <div class="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+  <!-- Toggle Dark/Light -->
+  <button id="toggle-theme" class="fixed top-4 right-4 z-50 p-2 bg-sand-50 dark:bg-gray-800 rounded-full shadow">
+    <i class="fas fa-moon"></i>
+  </button>
+  <!-- Titre du site en haut à gauche -->
+  <div class="absolute top-4 left-4 z-40">
+    <span class="text-2xl font-extrabold tracking-widest text-blue-900 dark:text-blue-200 bg-white/70 dark:bg-gray-900/70 px-3 py-1 rounded shadow-lg border-l-4 border-orange-500">Discover West Africa</span>
+  </div>
+  <!-- Header -->
+  <header class="flex flex-col items-center justify-center py-16 min-h-[40vh]">
+    <div class="w-full overflow-x-hidden flex justify-center">
+      <h1 class="slidein-slogan text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg px-4 text-center">
+        Explorez l’Afrique de l’Ouest, sans frontières.
+      </h1>
+    </div>
+    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+      <button id="btn-countries" class="bg-blue-900 hover:bg-blue-700 text-white font-bold px-6 py-2 rounded shadow transition-all duration-300 transform hover:scale-105 animate-bounce">
+        Découvrir les pays
+      </button>
+      <button id="btn-quiz" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-6 py-2 rounded shadow transition-all duration-300 transform hover:scale-105 animate-bounce">
+        Mini Quiz
+      </button>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main id="app" class="max-w-6xl mx-auto px-2 sm:px-4 py-8">
+    <!-- Pays, fiche pays, quiz, etc. injectés ici -->
+  </main>
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm font-semibold text-blue-900 dark:text-blue-100 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm shadow-inner">
+    © 2025 Discover West Africa
+  </footer>
+  <script src="countries.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
